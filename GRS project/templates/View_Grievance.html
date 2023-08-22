@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+    <title>View Grievance</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+
+     <script>
+        var subjectObject = {
+            "Students": {
+                "Academic": ["Mechanical", "Civil", "IT"]//, "Electrical", "Electronics", "Metallurgy", "Industrial", "sugar"],
+                // "Non-academic": ["Mech", "Civil", "Electrical", "IT", "Electronics", "Metallurgy", "Industrial", "sugar"],
+                // "Student Section": ["dept not required"],
+                // "Library": ["dept not required"],
+                // "Workshop": ["dept not required"],
+                // "Hostel": ["dept not required"],
+                // "Girls": ["dept not required"],
+                // "Sports": ["dept not required"],
+                // "Exam dept": ["dept not required"],
+                // "Ragging": ["dept not required"]
+            },
+            "Faculty": {
+                "Academic": ["Mechanical", "Civil", "IT"]//, "Electrical", "Electronics", "Metallurgy", "Industrial", "sugar"],
+                // "Non-academic": ["Mech", "Civil", "Electrical", "IT", "Electronics", "Metallurgy", "Industrial", "sugar"],
+                // "Student Section": ["dept not required"],
+                // "Library": ["dept not required"],
+                // "Workshop": ["dept not required"],
+                // "Hostel": ["dept not required"],
+                // "Girls": ["dept not required"],
+                // "Sports": ["dept not required"],
+                // "Exam dept": ["dept not required"],
+                // "Ragging": ["dept not required"]
+            }
+        }
+        window.onload = function() {
+            var subjectSel = document.getElementById("subject");
+            var topicSel = document.getElementById("topic");
+            var chapterSel = document.getElementById("chapter");
+            for (var x in subjectObject) {
+                subjectSel.options[subjectSel.options.length] = new Option(x, x);
+            }
+            subjectSel.onchange = function() {    //empty Chapters- and Topics- dropdowns
+                   
+                chapterSel.length = 1;   
+                topicSel.length = 1;
+                //display correct values
+                for (var y in subjectObject[this.value]) {
+                    topicSel.options[topicSel.options.length] = new Option(y, y);
+                }
+            }
+            topicSel.onchange = function() {    //empty Chapters dropdown
+                   
+                chapterSel.length = 1;
+                //display correct values
+                var z = subjectObject[subjectSel.value][this.value];
+                for (var i = 0; i < z.length; i++) {
+                    chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script> 
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+        <div class="topnav">
+            <a class="topnav" style="font-size: 20px;" href="/Logout">LOGOUT
+                
+       
+            </a>
+            <a class="topnav" style="font-size: 20px;" href="/Reply">Reply
+               
+       
+            </a>
+            <a class="topnav" style="font-size: 20px;" href="/Report">Report
+             
+                </a>
+        </div>
+        <br>
+        <h1>
+            <center><b>View Grievance</b></center>
+        </h1>
+        <br>
+        <br>
+        <center>
+
+
+            <form id="form1" action="/Read_G" method="post">
+                User: <select name="user" id="subject">
+                <option value="User" selected="User">Select User</option>
+              </select>
+                <br><br> Type: <select name="type" id="topic">
+                <option value="type" selected="type">Please select user first</option>
+              </select>
+                <br><br> Dept: <select name="dept" id="chapter">
+                <option value="dept" selected="Dept">Please select Type first</option>
+              </select>
+                <br><br>
+                <input type="submit" form="form1" value="Submit">
+            </form>
+        </center>
+<div>
+        {% if t %}
+                    {% for value in t %}
+        
+        
+                        <ol class="list-group">
+                            <li class="list-group-item">
+                            <h2> </h2>
+                            <p>{{value}}</br></p>
+                            </li>
+                        </ol>
+            
+                    {% endfor %}
+        {% endif %}
+</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+</body>
+
+</html>

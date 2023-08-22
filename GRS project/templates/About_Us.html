@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>ABOUT US</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='aboutus.css') }}">
+
+</head>
+
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/Login_Option">LOGIN</a>
+            <a href="/Objective">OBJECTIVE</a>
+            <a href="/How_We_Works">HOW WE WORKS</a>
+            <a href="/About_Us">ABOUT US</a>
+            <a href="/Contact_Us">CONTACT US</a>
+
+        </div>
+        <div class="topnav">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "100%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <div class="topnav">
+                <a class="topnav" style="font-size: 20px;" href="/Home_Page">HOME</a>
+                <a class="topnav" style="font-size: 20px;" href="/User_Data">Users</a>
+
+                <a class="topnav" style="font-size: 20px;" href="/Cm">Commitee Members</a>
+
+                <a class="topnav " style="font-size: 20px;" href="/Admin">Admin</a>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <br>
+        <div class="about-section">
+            <h1>About Us</h1>
+            <br>
+            <p>
+                <h2>Grievance Redressal System</h2>
+                <p>
+                    <p>
+                        Designed By Trident
+
+                    </p>
+        </div>
+        <br>
+        <h2 style="text-align:center">Our Team</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+
+                    <div class="container">
+                        <br>
+                        <h2>Sainath Mohite</h2>
+                        <p class="title">176034</p>
+                        <p>mohitesai2713@gmail.com</p>
+                        <p><button class="button" onclick="sai()">Contact
+                            <script>
+                                function sai(){
+                                    window.open('https://instagram.com/anonymous_rhymester?utm_medium=copy_link');
+                                }
+                            </script>
+                            </button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+
+                    <div class="container">
+                        <br>
+                        <h2>Soham Jagtap</h2>
+                        <p class="title">186024</p>
+                        <p>sohamvjagtap9750@gmail.com</p>
+                        <p><button class="button" onclick="soham()">Contact
+                            <script>
+                                function soham(){
+                                    window.open('https://instagram.com/_mr.silentkiller_?utm_medium=copy_link');
+                                }
+                            </script>
+                            </button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+
+                    <div class="container">
+                        <br>
+                        <h2>Shivani Karande</h2>
+                        <p class="title">186029</p>
+                        <p>karandeshivani119@gmail.com</p>
+                        <p><button class="button" onclick="shivani()">Contact
+                            <script>
+                                function shivani(){
+                                    window.open('https://instagram.com/_shivanya_13?utm_medium=copy_link');
+                                }
+                            </script>
+                            </button></p>
+                    </div>
+                </div>
+            </div>
+            <div id="mySidenav3" class="sidenav1">
+                <a href="/Scope" id="about">Scope</a>
+                <a href="/Function" id="blog">Functions</a>
+                <a href="/Powers" id="projects">Powers</a>
+                <a href="/Purpose" id="contact">Purpose</a>
+            </div>
+            <div id="mySidenav1" class="sidenav2">
+                <a href="https://www.facebook.com/GovernmentPolyKolhapur" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/governmentpoly2?lang=en" class="fa fa-twitter"></a>
+                <a href="https://t.co/fI7k3tt30j?amp=1" class="fa fa-google"></a>
+
+            </div>
+
+            <a href="/Home_Page" class="previous">&laquo; Previous</a>
+</body>
+
+</html>

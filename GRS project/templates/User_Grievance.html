@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USER Grievance</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='user.css') }}">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 2000px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+
+        <div class="topnav">
+            <a class="topnav" style="font-size: 20px;">LOGOUT
+                
+       
+        </a>
+        </div>
+
+        <br>
+        <h1>
+            <center><b>Add a New Grievance</b></center>
+        </h1>
+        <button class="button" style="margin-top: 50px; margin-left: 500px;" onclick="Student_G()">Students
+        <script>
+                function Student_G()
+            {
+                window.open('/Stud_Grievance');
+            }
+            </script>
+        </button>
+
+        <button class="button" style="margin-top: 50px; margin-left: 700px;" onclick="Faculty_G()">Faculty Staff
+        <script>
+                function Faculty_G()
+            {
+                window.open('/Fac_Grievance');
+            }
+            </script>
+        </button>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ADMIN DATA</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/Login_Option">LOGIN</a>
+            <a href="/Objective">OBJECTIVE</a>
+            <a href="/How_We_Works">HOW WE WORKS</a>
+            <a href="/About_Us">ABOUT US</a>
+            <a href="/Contact_Us">CONTACT US</a>
+
+        </div>
+        <div class="topnav">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "100%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <div class="topnav">
+                <a class="topnav" style="font-size: 20px;" href="/Home_Page">HOME</a>
+                <a class="topnav" style="font-size: 20px;" href="/User_Data">Users</a>
+
+                <a class="topnav" style="font-size: 20px;" href="/Cm">Commitee Members</a>
+
+                <a class="topnav " style="font-size: 20px;" href="/Admin">Admin</a>
+
+            </div>
+        </div>
+        <div>
+            <br>
+            <b><h3><center>ADMIN</center></h3></b>
+            <br>
+            <center><img src="{{ url_for('static',filename='admin.png') }}"></center>
+        </div>
+        <div class="column">
+            <b><center><h3>Academic:</b></center>
+            </h3>
+            <h4>
+                <center>#HEAD of Dept 1=.......</h4>
+            </center>
+            <h4>
+                <center>#HEAD of Dept 2=.......</h4>
+            </center>
+            <h4>
+                <center>#HEAD of Dept 3=.......</h4>
+            </center>
+        </div>
+
+        <div class="column">
+            <b><center><h3>Non-Academic:</b></center>
+            </h3>
+            <h4>
+                <center>#HEAD of Dept 1=.......</h4>
+            </center>
+            <h4>
+                <center>#HEAD of Dept 2=.......</h4>
+            </center>
+            <h4>
+                <center>#HEAD of Dept 3=.......</h4>
+            </center>
+        </div>
+
+        <b><center><h3>For Other Dept:</b></center>
+        </h3>
+        <BR>
+        <h4>
+            <center>#PRINCIPLE=.......</h4>
+        </center>
+        <BR>
+
+        <h4>
+            <center>#VICE-PRINCIPLE=.......</h4>
+        </center>
+        <BR>
+        <div id="mySidenav3" class="sidenav1">
+            <a href="/Scope" id="about">Scope</a>
+            <a href="/Function" id="blog">Functions</a>
+            <a href="/Powers" id="projects">Powers</a>
+            <a href="/Purpose" id="contact">Purpose</a>
+        </div>
+        <div id="mySidenav1" class="sidenav2">
+            <a href="https://www.facebook.com/GovernmentPolyKolhapur" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/governmentpoly2?lang=en" class="fa fa-twitter"></a>
+            <a href="https://t.co/fI7k3tt30j?amp=1" class="fa fa-google"></a>
+
+        </div>
+
+        <a href="/Home_Page" class="previous">&laquo; Previous</a>
+
+</body>
+
+</html>

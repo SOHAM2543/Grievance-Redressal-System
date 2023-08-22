@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <title>HOME PAGE</title>
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='homepg.css') }}">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 220px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/Login_Option">LOGIN</a>
+            <a href="/Objective">OBJECTIVE</a>
+            <a href="/How_We_Works">HOW WE WORKS</a>
+            <a href="/About_Us">ABOUT US</a>
+            <a href="/Contact_Us">CONTACT US</a>
+
+        </div>
+        <div class="topnav">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "100%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <div class="topnav">
+                <a class="topnav" style="font-size: 20px;" href="/Home_Page">HOME</a>
+                <a class="topnav" style="font-size: 20px;" href="/User_Data">Users</a>
+
+                <a class="topnav" style="font-size: 20px;" href="/Cm">Commitee Members</a>
+
+                <a class="topnav " style="font-size: 20px;" href="/Admin">Admin</a>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="column">
+                <BR>
+                <div>
+                    <h1 style="font-size: 40px;">
+                        <p><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></p>
+                    </h1>
+                    </h1>
+                    <div class="w3-panel w3-leftbar w3-border-blue">
+                        <div class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">
+                            <h5 style="text-align: justify;">
+                                <p>In colleges if anyone wants to Grievance/Complaint about something we need to write it down on a paper and submit it in complaint box. So for solving this problem we are creating a Online Grievance/Complaint Redressal System
+                                    for institute. Here anyone related to collage or any other person can just easily login and submit his Grievance/complaint. This Grievance/complaint letter will be solved by respective Head of dept and committee members.
+                                    In this system the facility of managing User and their data related to their Complaints and their profile is also easily managed. This data can be easily viewed and modified whenever required. This Grievance/Complaint
+                                    Redressal System also provides the functionality of providing a Weekly & Monthly report which will used to maintain information about how many complaints are solved in a particular month. It also provides the validation
+                                    of Users.</p>
+                                <p>
+                                    The purpose of this project is to provide optimized solutions for the student grievances. The proposed model for the Grievance/Complaint Redressal System will have ability to minimize student’s dissatisfaction we try to improve the relationship between
+                                    student and University by presenting the model of e-complaint web based system. This system will give solution to the User’s (Student, Faculty staff and Parents)Grievances. The existing system has manual processing
+                                    through committee members, Head of dept and Principal. The proposed system had capable to complete the process automatically by using our application..</p>
+                                </p>
+                                <P>
+
+                                    We are developing an online Grievance/Complaint Redressal System for submitting complaints online by using Grievance/complaint Redressal System a user can upload/post his complaint from anywhere by using this website on his phone or PC Online. Complaint
+                                    Box is easy and secure way as compare to other previous methods. Due to an online compliant box manual effort and wastage of paper is decrease. User can submit his complaint by easily creating his/her own profile also
+                                    User can check the current status of their complaints and can view that what kind of action is taken of his/her complaint. Online Grievance/complaint Redressal System shows the current status of the complaint that whether
+                                    it is in processes or closed. It is based on centralize management only the Res. Head of dept & Committee members can check or solve the complaint. Admin having the authority to remove a User. Centralized management
+                                    for checking current status of complaint and updating status of complaints. Admin can generate a report of this system in between selected date of his own choice.
+                                </P>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <center>
+                    <div>
+                        <BR>
+                        <h1 style="font-size:45px;"><b><center>STRUCTURE</center></b></h1>
+                    </div>
+                    <BR>
+                    <div class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">
+                        <div>
+                            <img src="{{ url_for('static',filename='11.jpg') }}">
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        </center>
+</body>
+
+</html>

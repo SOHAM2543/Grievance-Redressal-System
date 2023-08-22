@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+
+<head>
+
+    <title>sign up page of User </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='signup.css') }}">
+
+
+</head>
+
+<body>
+
+
+
+    <div class="signup-form">
+        <form id="form1" action="/User_S" method="post">
+            <h2>Sign Up</h2>
+            <p>Please fill in this form to create an account!</p>
+            <hr>
+
+
+
+            <div class="form-group">
+                <input type="text" name="email" placeholder="Email" required>
+            </div>
+
+
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required="required">
+            </div>
+            <h4>{{ c_message }}</h4>
+            <div class="form-group">
+                <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+            </div>
+            <div class="form-group">
+                <input type="submit" form="form1" value="Sign Up">
+                <h4>{{ message }}</h4>
+
+            </div>
+        </form>
+        <div class="hint-text">Already have an account? <a href="/User_Login"><b>Login here</b></a> l</div>
+    </div>
+</body>
+
+</html>

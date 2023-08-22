@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<title>OBJECTIVE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 1000px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </div>
+    <div class="w3-container">
+
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>GRIEVANCE REDRESSAL SYSTEM</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>Government Polytechnic Kolhapur</center></b></a>
+        <a class="w3-btn w3-red w3-hover-white" align="center" style="font-size: 20px;"><b><center>An Autonomous Institute of Government of Maharashtra</center></b></a>
+        <br>
+        <br>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/Login_Option">LOGIN</a>
+            <a href="/Objective">OBJECTIVE</a>
+            <a href="/How_We_Works">HOW WE WORKS</a>
+            <a href="/About_Us">ABOUT US</a>
+            <a href="/Contact_Us">CONTACT US</a>
+
+        </div>
+        <div class="topnav">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "100%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <div class="topnav">
+                <a class="topnav" style="font-size: 20px;" href="/Home_Page">HOME</a>
+                <a class="topnav" style="font-size: 20px;" href="/User_Data">Users</a>
+
+                <a class="topnav" style="font-size: 20px;" href="/Cm">Commitee Members</a>
+
+                <a class="topnav " style="font-size: 20px;" href="/Admin">Admin</a>
+
+            </div>
+        </div>
+        <BR>
+        <div>
+            <h2><b><center>OBJECTIVE</center></b></h2>
+        </div>
+        <div class="column">
+
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <div class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">
+                    <h5 style="text-align: justify;">
+                        <p>The objective of the Grievance Cell is to develop a responsive and accountable attitude among all the stakeholders in order to maintain a harmonious educational atmosphere in the institute. A Grievance Cell is constituted for the
+                            redressal of the problems reported by the Students of the College with the following objectives: Upholding the dignity of the College by ensuring strife free atmosphere in the College through promoting cordial Student-Student
+                            relationship and Student-teacher relationship etc. </p>
+                        <p>Encouraging the Students to express their grievances / problems freely and frankly, without any fear of being victimized. Suggestion / complaint Box is installed in front of the Administrative Block in which the Students, who want
+                            to remain anonymous, put in writing their grievances and their suggestions for improving the Academics / Administration in the College. Advising Students of the College to respect the right and dignity of one another and show
+                            utmost restraint and patience whenever any occasion of rift arises.</p>
+                        <p> Advising All the Students to refrain from inciting Students against other Students, teachers and College administration Advising all staffs to be affectionate to the Students and not behave in a vindictive manner towards any of
+                            them for any reason. Ragging in any form is strictly prohibited in and outside the institution. Any violation of ragging and disciplinary rules should be urgently brought to the notice of the Principal</p>
+
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="column">
+
+
+            <div class="w3-panel w3-topbar w3-bottombar w3-border-red w3-pale-red">
+                <p>
+                    <p>GRS has been created in the college to resolve issues related to student’s problems, develop a responsive and accountable attitude among the all stakeholders in order to maintain a harmonious educational atmosphere in Institute. Following
+                        are the important objectives of GRS. </p>
+                    <p> 1. To develop an organizational framework to resolve Grievances of Students and other stakeholders.</p>
+                    <p> 2. To provide the students access to immediate, hassle free recourse to have their Grievances redressed. </p>
+                    <p> 3. To enlighten the students on their duties and responsibilities to access benefits due under the policies. </p>
+                    <p> 4. To establish structured interactions with students to elicit information on their expectations. </p>
+                    <p> 5. To identify systemic flaws in the design and administration of various general insurance products and to seek solutions thereon. </p>
+                    <p> 6. To institute a monitoring mechanism to oversee the functioning of the Grievance Redressal Policy. </p>
+                    <p> 7. Encouraging the Students to express their grievances / problems freely and frankly, without any fear of being victimized.</p>
+                    <p> 8. Suggestion / complaint Box will be installed in the Administrative Block in which the Students, who want to remain anonymous, put in writing their grievances and their suggestions for improving the Academics / Administration in
+                        the College. </p>
+                    <p> 9. Ragging in any form is strictly prohibited in and outside the institution. Any violation of ragging and disciplinary rules should be urgently brought to the notice of the Principal</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav3" class="sidenav1">
+        <a href="/Scope" id="about">Scope</a>
+        <a href="/Function" id="blog">Functions</a>
+        <a href="/Powers" id="projects">Powers</a>
+        <a href="/Purpose" id="contact">Purpose</a>
+    </div>
+    <div id="mySidenav1" class="sidenav2">
+        <a href="https://www.facebook.com/GovernmentPolyKolhapur" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/governmentpoly2?lang=en" class="fa fa-twitter"></a>
+        <a href="https://t.co/fI7k3tt30j?amp=1" class="fa fa-google"></a>
+
+    </div>
+
+    <a href="/Home_Page" class="previous">&laquo; Previous</a>
+
+
+
+
+</body>
+
+</html>
